@@ -204,7 +204,7 @@ class MecabTokenizer:
             if line == "EOS":
                 break
 
-            token, _ = line.split("\t")
+            token, _ = line.split("\t", 1)
             token_start = text.index(token, cursor)
             token_end = token_start + len(token)
             if self.do_lower_case and token not in never_split:
